@@ -1,4 +1,4 @@
-package com.threads;
+package com.threads.waitnotify;
 
 public class Producer  extends Thread{
 
