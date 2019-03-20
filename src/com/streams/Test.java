@@ -41,6 +41,11 @@ public class Test {
 		// Returns true if none of the Strings are 'yes'
 		System.out.println(hobbit.stream().allMatch(s->s.equals("yes")));
 		
+		// Returns longest word
+		System.out.println(hobbit.stream().mapToInt(s->s.length()).max().getAsInt());
+		// This is better String::length
+		System.out.println(hobbit.stream().mapToInt(String::length).max().getAsInt());
+
 	}
 
 
