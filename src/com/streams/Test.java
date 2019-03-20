@@ -34,6 +34,13 @@ public class Test {
 		System.out.println(hobbit.stream().distinct().filter(s->s.length()>4).count());
 		System.out.println(hobbit.stream().distinct().filter(Test::isLongerThan4).count());
 
+		// Returns true if 'yes' exist
+		System.out.println(hobbit.stream().anyMatch(s->s.equals("yes")));
+		// Returns true if all the Strings are 'yes'
+		System.out.println(hobbit.stream().noneMatch(s->s.equals("yes")));
+		// Returns true if none of the Strings are 'yes'
+		System.out.println(hobbit.stream().allMatch(s->s.equals("yes")));
+		
 	}
 
 
